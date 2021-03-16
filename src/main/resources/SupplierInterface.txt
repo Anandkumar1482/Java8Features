@@ -1,0 +1,15 @@
+Supplier
+=========================
+1)it won't take any input perform some operation and produce some result
+
+Syntax:
+just supply my objects and its won't take any input
+
+interface Supplier<R>
+{
+public <R> get();
+}
+
+ex:
+to supplier for generating OTP
+======================================================

@@ -1,0 +1,43 @@
+Function-(Functional Interface)
+------------------------------------------
+input ->perform some operation ->output
+
+	4 ->square operation->16
+	
+The result need not be boolean type but anything.
+
+Syntax:
+------------------------------------
+Interface Function <T,R>{
+	T-Input Type
+	R-Return Type
+public abstract R apply(T t);
+
+}
+
+ex:
+public class FunctionExample {
+public static void main(String[] args) {
+Function<Integer, Integer> f = i -> i * i;
+System.out.println(f.apply(4));
+}
+}
+output:
+16
+
+Ex:2
+--------------------------------------
+public class FunctionExample2 {
+public static void main(String[] args) {
+Function<String, String> f = s -> s.toUpperCase().trim();
+System.out.println(f.apply(" sv college"));
+}
+}
+trim( )- can be used to remove the blank space from begin of the String and Ending of the String and not in-between of the String.
+output :
+SV COLLEGE
+
+Q)How to find a Grade for Student ?
+
+
+

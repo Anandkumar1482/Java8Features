@@ -1,0 +1,113 @@
+java8 Interface inside methods
+======================================================
+until 1.7 on words
+Every method present inside interface is always: public and abstract whether we
+declared or not.
+
+Ex:
+----------------------------
+void m1( );
+public void m1( );
+abstract void m1( );
+public abstract void m1( );
+-----------------------------
+from 1.8 version
+-----------------------------
+Related to methods:
+-----------------------------
+from 1.8 version inside interface default methods + static methods are allowed.
+from 1.9 version inside interface private method are allowed.
+
+Related to Variables:
+until 1.7
+--------------------------------------
+Every variable present inside interface is always
+public static final
+-------------------------------
+java 1.7
+	 1.8
+	 1.9 there is no Enhancements related to the variables on new version of java.
+
+1)Default Method | Virtual Extension Method | Defender Method
+-------------------------------------------------------------------
+Ex:
+--------
+interface interf{
+public void m1();
+public void m2();
+// public void m3();
+}
+public Demo1 implements interf{
+public void m1{
+}
+public void m2(){
+}
+----
+public void m100(){
+}
+if we are trying to add a new method inside interface all the implemented classes are
+affected.
+problem::::
+
+
+if we want change the functionality of this interface by adding a new method, all the
+implemented classes are affected.
+without effecting the implemented classes if we are trying to add a new method inside
+interface then we should go for Default methods.
+
+"Default methods already having implementation"
+Ex:
+interface inf{
+public void m1( );
+public void m2( );
+default void m3( ) {
+System.out.println("default implementation");
+}
+
+Note:
+=======================================================================================
+if we are not satisfy with the default implementation then we can override the default
+method implementation.
+-----------------------------------
+Q)What is Default modifier?
+if we are not declare any modifier then it is default modifier
+--------------------------------------
+Q)Why the word is Default ?
+---------------------------------------
+it is not a modifier because this default method having default implementation that's way
+the word default came.
+if we are not declare any modifier then it is default modifier
+
+Q)While overriding default method compulsory we should use public only ?
+-------------------------------------------------------------------------------
+because of default methods can't declare inside class ,we can declare inside interface
+only
+ex:
+inside class
+----------------
+switch(){
+case :1
+case :2
+default :
+}
+
+default ----> public only
+Inside class------modifier default not allowed here.
+
+NOTE::
+=====================================================================================
+Object class methods we can't declare as default methods.
+
+
+
+
+
+
+
+
+
+
+
+
+
+

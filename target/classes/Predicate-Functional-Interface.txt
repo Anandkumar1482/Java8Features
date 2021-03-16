@@ -1,0 +1,57 @@
+Functional Interface
+-----------------------------------------------------------------------
+Predicate (Functional interface)
+-----------------------------------------------------------------------
+take input perform some conditional check operation and return boolean value  then we should go for Predicate (FI).
+where ever conditional check is required then we should go for Predicate(FI ).
+the return type of predicate is -boolean
+Syntax:
+Interface Predicate<T>
+{
+public abstract boolean test(T t);
+}
+predicate can take only one type of parameter.
+
+
+Q)write a predicate whether the String is > 5 or not ?
+----------------------------------------------------------------
+Ex:2
+--------------------
+<String>
+this is the Type parameter
+Predicate<String> p = s -> s.length() > 5;
+System.out.println(p.test("anand"));//false
+
+Ex:3
+-------------------
+Predicate<Integer> p = i -> i % 2 == 0;
+System.out.println(p.test(10));
+output: true
+
+Ex:4
+---------------------------
+String[] s = { "anand", "venky", "vijay", "anji", "arun", "kamal" };
+//Predicate<String> p = i -> i.length() > 4;
+Predicate<String> p1 = i -> i.length() % 2 == 0;
+for (String s1 : s) {
+if (p1 test(s1)) {
+if (p1.test(s1)) {
+System.out.println(s1);
+}
+}
+}
+output:
+anji
+arun
+
+Predicate Chaining
+----------------------------------------
+p1.and(p2) -> By using all this methods we can implement Predicate Joining.
+
+p1.and(p2)---> -both condition should satisfy.
+p1.or(p2) --->atleast one condition satisfy or both.
+p1.negate( ) -->p1.nagate( ) -reverse of p1.
+
+
+
+

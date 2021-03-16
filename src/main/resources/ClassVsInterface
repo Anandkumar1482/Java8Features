@@ -1,0 +1,41 @@
+Class vs interface
+======================================================================
+Class is a heavy weight because of Object creation and it contain Constructor, static block,
+instance block
+
+interface is light weight because of never contain constructor, static block, instance black
+
+Q)When we should go for class ?
+--------------------------------------------------------------------------------------
+Q)Why interface support static methods ?
+--------------------------------------------
+because of this method no way related to Object.
+
+Q)How many ways we can call interface static methods?
+------------------------------------------------------------
+by default interface static method not available for the implementation class
+Ex:
+public interface inter {
+public static void m1() {
+System.out.println("interface static method");
+}
+}
+public class InterfaceStatic implements inter{
+public static void main(String[] args) {
+inter.m1(); //1 TRUE
+m1( );//2 FALSE
+InterfaceStatic t=new InterfaceStatic( );
+t.m1( );//3 FALSE
+InterfaceStatic.m1( );//4 TRUE
+}
+}
+NOTE: Interface static methods by default not available to the implementation class,we
+can call interface static method by using interface name only.
+By mistake if we are using implementation class name or implementation Object
+reference or if we are call directly we will get compile time error.
+Ex:from 1.8 version on words inside interface main() method is allowed.
+Interface interf{
+public static void main(String[ ] args ){
+System.out.println("inside interface static methods are allowed");
+}
+}

@@ -1,0 +1,113 @@
+java8 feature
+===================================
+1)to enable the concise code
+2)to enable functional programming in java
+
+Lambda Expression is first used programming language is Lisp in 1930.
+
+the main objective of Lambda Expression is to bring benfits of functional programming
+into java. 
+
+Q)What is Lambda Expression ?
+-------------------------------------------------------------------------
+It is an anonymous function 
+  ->no name 
+  ->without return type
+  ->without modifiers
+  
+  
+  Ex:1
+  public void m1( ){
+  Sysout.out.println("hello");
+  }
+  
+  in lambda Expression 
+  ->no name , without return type ,without modifiers
+  
+  ex:m1() -> {
+  			 	System.out.println("hello");
+  			 }	
+  			 
+    lambda expression body having one statement curly braces are optionl
+    if multiple lines are there curly braces are mandotary. 
+    
+    
+    ex:2
+    ------------------------
+    public static void (int a,int b){
+    System.out.println(a+b);
+    }
+    
+    
+    (int a ,int b) -> System.out.println(a+b);
+    
+    ->Compiler can able to guess the type automatically.
+    
+    (a,b) -> System.out.println(a+b);
+    
+    
+    
+    ex:3
+    --------------------------------
+    
+    public int squareIt(int n)
+    {
+    return n*n;
+    }
+    
+    (int n)->{return n*n}
+    //return statement is optional if we are having one statement
+    n->{return n*n}
+    //curly braces are optional
+    (n)->n*n;
+    //paranthasis is optional it is having only one parameter
+    
+    
+    ex:4
+    
+    public void m1(String s)
+    {
+    return s.length();
+    }
+    
+    lambda Expession
+    ---------------------
+    s->s.length();
+    
+    
+    note:
+    Without curly braces we can't use return keyword .compiler will consider
+     return value automatically.
+    within curly braces if we want to return any value compulsory can 
+    use return keyword.
+    
+    
+    
+    n->{return n*n;
+       };         -->valid
+    n->{return n*n }; invalid
+    every java statement ends with semi-colon .
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    

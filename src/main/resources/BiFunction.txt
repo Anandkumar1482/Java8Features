@@ -1,0 +1,13 @@
+@FunctionalInterface
+Represents a function that accepts two arguments and produces a result. This is the two-arity specialization of Function.
+
+This is a functional interface whose functional method is apply(Object, Object).
+
+Type Parameters:
+<T> the type of the first argument to the function
+<U> the type of the second argument to the function
+<R> the type of the result of the function
+Since:
+1.8
+See Also:
+Function

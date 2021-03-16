@@ -1,0 +1,81 @@
+1)Predicate< T > - takes an input perform conditional check and always return boolean value.
+Input Type T.
+2)Function< T , R > - takes an input ->perform some operation ->produce some result [the result which is need not to b
+Input Type T , Return Type R
+3)Consumer < T > - takes an input ->perform some operation -> it won't return any thing.
+Input Type T
+4)Supplier<R> --it won't take any input -->perform some operation --> it produce some result.
+
+1)Predicate   --->test()
+Syntax:
+Interface Predicate<T>
+{
+public abstract boolean test(T t);
+}
+predicate can take only one type of parameter.
+
+2)Function Interface    -->apply(T t)
+Syntax:
+------------------------------------
+Interface Function <T,R>{
+	T-Input Type
+	R-Return Type
+public abstract R apply(T t);
+
+Function can take two parameter.
+
+3)
+Syntax:
+Interface Consumer< T >
+{
+public void accept( T t );
+}
+
+Two arguments Functional interface
+===========================================================
+ex-
+whether the given number is even or not?
+whether the given two numbers even or not?
+
+Predicate vs BiPredicate
+--------------------------------
+
+1)normal Predicate can take only one input argument and perform some conditional check
+2)some times our requirement is we have to take 2 input arguments and perform some conditional check,
+for this requirements we should go for BiPredicte.
+
+Syntax:
+interface BiPredicate<T1,T2>
+{
+public boolean test(T1 t1,T2 t2);
+}
+
+Default and static methods are same
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

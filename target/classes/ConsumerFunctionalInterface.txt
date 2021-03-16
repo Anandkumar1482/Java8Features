@@ -1,0 +1,24 @@
+Consumer Functional Interface
+=================================================
+1)Predicate< T > - takes an input perform conditional check and always return boolean value.
+Input Type T.
+2)Function< T , R > - takes an input ->preform some operation ->produce some result [the result which is need not to b
+Input Type T , Return Type R
+3)Consumer < T > - takes an input ->perform some operation -> it won't return any thing.
+Input Type T
+Syntax:
+Interface Consumer< T >
+{
+public void accept( T t );
+}
+
+
+Consumer Chaining
+=========================================================================
+Consumer < T > - takes an input ->perform some operation -> it won't return any thing.
+Input Type T
+Syntax:
+Interface Consumer <T>
+{
+public void accept(T t);
+}

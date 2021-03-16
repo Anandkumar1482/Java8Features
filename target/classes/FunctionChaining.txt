@@ -1,0 +1,21 @@
+FunctionChaining
+------------------------------------------
+1)f1.andThen(f2).apply(i);
+first f1 followed by f2
+
+after applying f1 function for the result f2 function will applied ,
+two functions we can combine together to form more complex functions.
+======================================================================
+2)f1.compose(f2).apply(i);
+ first f2 and then f1
+-------------------------------------------------
+the difference is Syntactical Trick
+Ex:
+public class FunctionandThencompose {
+public static void main(String[] args) {
+Function<Integer, Integer> f = i -> i * 2;
+Function<Integer, Integer> f1 = i -> i * i * i;
+System.out.println(f.andThen(f1).apply(2));
+System.out.println(f.compose(f1).apply(2));
+}
+}

@@ -1,0 +1,16 @@
+Functional Interface
+==============================
+Functional interface having only one single abstract method
+
+if we want to call or invoke lambda expression
+compulsory Functional interface is required.
+
+ex:
+runnable ->run()
+comparable ->compareTo()
+comparator ->compare()
+
+Lambda expression with Functional interface
+--------------------------------------------------
+where ever the functional interfaces are there
+then we should go for Lambda Expression.

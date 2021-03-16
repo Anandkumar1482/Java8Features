@@ -1,0 +1,37 @@
+>method reference is nothing refer one method to already existing method
+  no need to write a separate method for this requirement we have to make code 
+  re-usability.
+->method reference is alternative to Lambda expression. no need to write lambda 
+ expression we have to re-use already existing method.
+
+Method Reference is applicable 
+============================
+static method
+instance method
+
+1)For the instance methods
+--------------------------------------------------------
+we have to call method reference by using 
+ex:
+Test t=new Test();
+t::m1();
+ObjectReference :: MethodName
+
+2)For the static method 
+-----------------------------------------------------------
+we have to call method reference by using 
+ex:
+Test::m1()
+ClassName :: MethodName
+
+note:
+in method reference arguments should be same only.
+public void run();
+public void m1();
+   Except arguments remaining 
+   the method name,return type,modifiers not required to worry.
+
+in the case of different return types is possible.
+
+
+ 
